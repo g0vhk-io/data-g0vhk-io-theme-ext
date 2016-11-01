@@ -1,2 +1,2 @@
 include README.rst
-recursive-include ckanext/theme *.html *.json *.js *.less *.css *.mo
+recursive-include ckanext/theme *.html *.json *.js *.less *.css *.mo *.jpg
