@@ -1,0 +1,42 @@
+@import url(http://fonts.googleapis.com/earlyaccess/cwtexfangsong.css);
+@import url(//fonts.googleapis.com/earlyaccess/cwtexhei.css);
+@import url(//fonts.googleapis.com/earlyaccess/cwtexkai.css);
+@import url(//fonts.googleapis.com/earlyaccess/cwtexming.css);
+@import url(//fonts.googleapis.com/earlyaccess/cwtexyen.css);
+
+body,ul,li,a,td{
+    font-family: "cwtexyen", "Arial";
+}
+h1,h2,h3,h4,h5,h6
+{
+    font-family: "cwtexyen", "Arial";
+}
+
+.home_bg{
+    background-image:url('/hong_kong_bg.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: auto 100%;
+}
+
+.home_header{
+    color: #FFFFFF;
+}
+
+.home_not_found{
+    background-color:rgba(64,64,64,0.7);
+}
+
+.home_not_found a{
+    color:#ddd;
+}
+
+.home_not_found a:hover
+{
+    color:#eee;
+}
+
+.media-grid
+{
+    background-color:#ffffff;
+}

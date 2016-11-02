@@ -1,54 +1,36 @@
-<div role="main" class="hero" style="background-image:None;background-color:#ddd">
+<div role="main" class="hero home_bg" style="border:none">
   <div class="container">
-    <div class="row row1">
-      <div class="span6 col1">
-        {% block promoted %}
-          {% snippet 'home/snippets/promoted.html' %}
-        {% endblock %}
+    <center>
+      <h2 class="home_header">歡迎到民間開放數據庫</h2>
+      <form class="module-content search-form" method="get" action="/dataset" style="border-bottom:none">
+        <div class="search-input control-group search-giant">
+          <input type="text" class="search" name="q" value="" autocomplete="off" placeholder="E.g. environment">
+          <button type="submit">
+            <i class="icon-search"></i>
+            <span>Search</span>
+          </button>
+            
+        </div>
+      </form>
+      <div class="home_not_found">
+      <h1 class="home_header">找不到想要的數據?</h1>
+      <h2 class="home_header">
+            請發電郵到 <a href="mailto:info@g0vhk.io">info@g0vhk.io</a> 
+      </h2>
       </div>
-      <div class="span6 col1">
-        {% block data_one %}
-          {% snippet 'home/snippets/data_one.html' %}
-        {% endblock %}
-      </div>
-
-
-    </div>
-    <br/>
-    <div class="row row1">
-      <div class="span6 col1">
-        {% block enquiry %}
-          {% snippet 'home/snippets/enquiry.html' %}
-        {% endblock %}
-      </div>
-       <div class="span6 col2">
-        {% block search %}
-          {% snippet 'home/snippets/search.html' %}
-        {% endblock %}
-      </div>
-
-
-    </div>
+     </center>
   </div>
+  <br/>
+ <br/>
+ <br/>
+ <br/>
+     <a href="https://www.flickr.com/photos/laszlo-photo/" style="color:white; position: relative; right:0px;float:right;text-align:right;font-size:8pt">Photo Credit: LASZLO ILYES</a>
 </div>
 <div role="main">
   <div class="container">
-    <div class="row row2">
-      <div class="span6 col1">
-        {# Note: this featured_group block is used as an example in the theming
-           tutorial in the docs! If you change this code, be sure to check
-           whether you need to update the docs. #}
-        {# Start template block example. #}
-        {% block featured_group %}
-          {% snippet 'home/snippets/featured_group.html' %}
-        {% endblock %}
-        {# End template block example. #}
+      <div class="span6" style="width:100%;background-color:#fff">
+        {% set groups = h.get_featured_groups(count=999) %}
+        {% snippet "group/snippets/group_list.html", groups=groups%}
       </div>
-      <div class="span6 col2">
-        {% block featured_organization %}
-          {% snippet 'home/snippets/featured_organization.html' %}
-        {% endblock %}
-      </div>
-    </div>
   </div>
 </div>
