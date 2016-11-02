@@ -1,3 +1,4 @@
+{% set stats = h.get_site_statistics() %}
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
@@ -37,6 +38,7 @@
 </div>
 <div role="main">
   <div class="container" style="width:80%">
+      <h1>現在有 <b>{{ h.SI_number_span(stats.dataset_count) }}</b> 個數據集</h0>
       <h1>分類</h1>
       <center>
         <div class="span6" style="width:100%;background-color:#fff">
